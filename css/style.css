@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: block;
+}
+
+/* Убираем подчеркивание текста в ссылках*/
+a {
+  text-decoration: none;
+  display: block;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  display: block;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hello {
+  background-color: #445162;
+  color: #ffffff;
+  filter: drop-shadow(0.5px 0.866px 0px rgba(0, 0, 0, 0.3));
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.hello .body__title {
+  font-size: 60px;
+  font-weight: normal;
+}
+.hello .list__item {
+  list-style-type: none;
+  font-size: 20px;
+  line-height: 36px;
+  padding-right: 5em;
+  display: flex;
+}
+.hello .list__item::before {
+  content: url(../img/check_icon.svg);
+  padding-right: 1em;
+}
+.hello .hello__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hello .hello_img {
+  width: 37%;
+}
+
+.about {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .body__title {
+  font-size: 30px;
+  line-height: 1.2;
+  color: #445161;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+.about .body__img {
+  flex: 0 0 430px;
+}
+.about .body__text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  margin: 1em 0;
+}
+.about .about__body {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cards {
+  padding: 50px 0px;
+  background-color: #f5f5f5;
+}
+.cards .cards__title {
+  font-size: 30px;
+  line-height: 1.2;
+  color: #445161;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.cards .cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards .cards__item {
+  display: flex;
+  align-items: center;
+  flex: 0 0 600px;
+  margin: 15px 8px;
+}
+.cards .item__title {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #445161;
+}
+.cards .item__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+.cards .item__photo {
+  width: 200px;
+  height: 150px;
+  background-color: #445161;
+  flex-shrink: 0;
+}
+.cards .item__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.columns .columns__title {
+  font-size: 30px;
+  line-height: 1.2;
+  color: #445161;
+  text-align: center;
+  margin: 100px 0px 75px 0px;
+}
+.columns .columns__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.columns .columns__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #445161;
+  border-radius: 8px;
+  background-color: #445161;
+  flex: 0 0 300px;
+  padding: 15px 0px;
+  margin: 25px;
+}
+.columns .item__title {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #ffffff;
+  background: #445162;
+  padding: 15px 0px;
+}
+.columns .item__title--2 {
+  font-size: 40px;
+  color: #445162;
+  background-color: #fff;
+  padding: 20px 0px;
+  width: 100%;
+  text-align: center;
+}
+.columns .item__text {
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #445162;
+  flex: 0 1 100%;
+  padding: 15px 15px;
+}
+.columns .item__btn {
+  width: 260px;
+  padding: 9px 0px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 18px;
+  line-height: 1;
+  color: #445161;
+  font-weight: bold;
+  font-family: "Arial";
+  text-align: center;
+}
+
+.footer {
+  font-size: 12px;
+  line-height: 2;
+  color: #445162;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 50px 0px;
+}
